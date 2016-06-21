@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Works: Simon Says Game</title>
+	<meta description="My Works: A FreeCodeCamp Simon Game Project" />
+	<!-- FACEBOOK -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="My Works: Simon Says Game">
+	<meta property="og:url" content="https://www.vinaypuppal.com/fcc-simon-game">
+	<meta property="og:image" content="https://res.cloudinary.com/vinaypuppal/image/upload/v1466486988/simon-says-game-ui_nyxr6d.png">
+	<meta property="og:site_name" content="VinayPuppal">
+	<meta property="og:description" content="My Works: A FreeCodeCamp Simon Game Project">
+	<meta property="fb:app_id" content="1110213405717341">
+	<!-- TWITTER -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@vinaypuppal">
+	<meta name="twitter:title" content="My Works: Simon Says Game">
+	<meta name="twitter:description" content="My Works: A FreeCodeCamp Simon Game Project">
+	<meta name="twitter:image:src" content="https://res.cloudinary.com/vinaypuppal/image/upload/v1466486988/simon-says-game-ui_nyxr6d.png">
+	
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png?v=7kkBEKw5XN">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png?v=7kkBEKw5XN">
+	<link rel="icon" type="image/png" href="favicons/favicon-32x32.png?v=7kkBEKw5XN" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png?v=7kkBEKw5XN" sizes="192x192">
+	<link rel="icon" type="image/png" href="favicons/favicon-96x96.png?v=7kkBEKw5XN" sizes="96x96">
+	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png?v=7kkBEKw5XN" sizes="16x16">
+	<link rel="manifest" href="favicons/manifest.json?v=7kkBEKw5XN">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg?v=7kkBEKw5XN" color="#82949d">
+	<link rel="shortcut icon" href="favicons/favicon.ico?v=7kkBEKw5XN">
+	<meta name="apple-mobile-web-app-title" content="VinayPuppal">
+	<meta name="application-name" content="VinayPuppal">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png?v=7kkBEKw5XN">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml?v=7kkBEKw5XN">
+	<meta name="theme-color" content="#82949d">
+
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Simon Says Game</h1>
+		</header>
+		<main>
+			<div class="round-info">
+				Click StartGame To Play
+			</div>
+			<div class="board">
+				<div class="cell green" data-cell="0">
+					<audio preload="auto" data-sound="0">
+	          <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg"/>
+	          <source src="" type="audio/ogg"/>
+	        </audio>
+				</div>
+				<div class="cell red" data-cell="1">
+					<audio preload="auto" data-sound="1">
+	          <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg"/>
+	          <source src="" type="audio/ogg"/>
+	        </audio>
+				</div>
+				<div class="cell orange" data-cell="2">
+					<audio preload="auto" data-sound="2">
+	          <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg"/>
+	          <source src="" type="audio/ogg"/>
+	        </audio>
+				</div>
+				<div class="cell blue" data-cell="3">
+					<audio preload="auto" data-sound="3">
+	          <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg"/>
+	          <source src="" type="audio/ogg"/>
+	        </audio>
+				</div>
+			</div>
+			<div class="btn-container">
+				<div class="toggle-btn">
+					<p>Strict Mode</p>
+					<label class="switch">
+					<input id="strict" type="checkbox">
+					<div class="slider round"></div>
+				</label>
+
+				</div>
+				<div class="start-btn">
+					<a id="start" href="#">
+					Start Game
+					</a>
+					<a id="reset" href="#">
+						Reset
+					</a>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<p>Made With ❤ By VinayPuppal</p>
+		</footer>
+	</div>
+
+	<audio preload="auto" id="error-audio">
+	          <source src="https://res.cloudinary.com/vinaypuppal/video/upload/v1466314828/Uh_Oh_Baby-SoundBible.com-1858856676_z6zu7g.mp3" type="audio/mpeg"/>
+	          <source src="" type="audio/ogg"/>
+	</audio>
+
+	<audio preload="auto" id="won-audio">
+	          <source src="https://res.cloudinary.com/vinaypuppal/video/upload/v1466315725/applause_pholbh.mp3" type="audio/mpeg"/>
+	          <source src="" type="audio/ogg"/>
+	</audio>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
